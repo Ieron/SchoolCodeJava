@@ -1,0 +1,82 @@
+/*		int hammingSize = heuristic.hamming(sBoard, gBoard);
+		int minFIndex = 0, minFValue = 0;
+		Board qBoard;
+		nullBlock = sBoard.getBlock(0);
+		ArrayList<Board> equalF = new ArrayList<Board>();
+		
+
+		
+		while(hammingSize != 0 && moves < 40) {		
+					
+			print();
+			blockFValue();
+			
+			for(Board board : pQ){
+				
+				int tempF = board.getFValue();
+				
+				if (equalF == null) {
+					equalF.add(board);
+					minFValue = tempF;
+				}
+				else if (tempF < minFValue) {
+					equalF.clear();
+					equalF.add(board);
+					minFValue = tempF;
+				}
+				else if(tempF == minFValue)
+					equalF.add(board);
+			}
+		
+			if (equalF.size() > 1) {
+				pQ.clear();
+				Boolean first = true;
+				for (Board board : equalF) {
+					board.setFValue(blockState(board, true));
+					pQ.add(board);
+					if (first) {
+						minFValue = board.getFValue();
+						minFIndex = pQ.indexOf(board);
+						first = false;
+					}
+					else if (minFValue > board.getFValue()) {
+						minFValue = board.getFValue();
+						minFIndex = pQ.indexOf(board);
+					}
+				}
+
+			}
+			
+			prvBoard = sBoard;
+			sBoard = pQ.get(minFIndex);
+			//move block
+			//sBoard.move(nullBlock, qBoard, blocksInQ.get(minFIndex).getYCord());
+		
+			
+			moves++;
+		
+			sBoard.setFValue(0);
+			pQ.clear();
+			equalF.clear();
+			hammingSize = heuristic.hamming(sBoard, gBoard);
+		
+			System.out.println("Hamming Size = " + hammingSize + " Move: " + moves);
+		
+			}
+				
+			print();
+			System.out.println("This puzzle has been solved! YAY! :D");
+			return;
+		
+		}*/
+	
+	//method that adds f values for all blocks to an array list
+	/*public void blockFValue(){
+		for(Board nextBoard : sBoard.neighbours()){
+			if(prvBoard == null ||compare(prvBoard, nextBoard) == false){
+					nextBoard.setFValue(blockState(nextBoard, false));
+					pQ.add(nextBoard);
+					blockState(nextBoard, false);
+			}
+		}
+	}*/
